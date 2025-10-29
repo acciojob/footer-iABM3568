@@ -1,1 +1,151 @@
 /* your code here */
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1a1a1a;
+            color: white;
+        }
+
+        /* Footer container */
+        footer {
+            background-color: #000000;
+            padding: 50px 0 0 0;
+        }
+
+        /* Content wrapper */
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        /* Top section - Logo and Social Icons */
+        .top {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 50px;
+        }
+
+        /* Company logo/name */
+        .logo_name {
+            font-size: 32px;
+            font-weight: normal;
+            color: white;
+        }
+
+        /* Social media icons container */
+        .media-icons {
+            display: flex;
+            gap: 15px;
+        }
+
+        /* Individual social media icon */
+        .media-icons a {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: white;
+            font-size: 20px;
+            transition: transform 0.3s ease;
+        }
+
+        .media-icons a:hover {
+            transform: scale(1.1);
+        }
+
+        /* Social media colors */
+        .media-icons .facebook { background-color: #3b5998; }
+        .media-icons .twitter { background-color: #1da1f2; }
+        .media-icons .instagram { background-color: #e1306c; }
+        .media-icons .linkedin { background-color: #0077b5; }
+        .media-icons .youtube { background-color: #ff0000; }
+
+        /* Link boxes container */
+        .link-boxes {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #333;
+        }
+
+        /* Individual link box */
+        .box {
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Box title */
+        .box h3 {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: white;
+            position: relative;
+            padding-bottom: 10px;
+        }
+
+        /* Underline for titles */
+        .box h3::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40px;
+            height: 2px;
+            background-color: white;
+        }
+
+        /* Links in boxes */
+        .box a {
+            color: #b3b3b3;
+            text-decoration: none;
+            margin-bottom: 12px;
+            font-size: 16px;
+            transition: color 0.3s ease;
+        }
+
+        .box a:hover {
+            color: white;
+        }
+
+        /* Bottom details - Copyright */
+        .bottom-details {
+            background-color: #1a1a1a;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .bottom-details .bottom_text {
+            color: #b3b3b3;
+            font-size: 14px;
+        }
+
+        /* Responsive design */
+        @media (max-width: 768px) {
+            .link-boxes {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .top {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .bottom-details {
+                flex-direction: column;
+                text-align: center;
+                gap: 10px;
+            }
+        }
